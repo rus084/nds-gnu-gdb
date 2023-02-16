@@ -96,13 +96,14 @@
 # else
 #  define _GL_STDDEF_ALIGNAS(type) /* */
 # endif
-typedef union
+/*typedef union
 {
   char *__p _GL_STDDEF_ALIGNAS (char *);
   double __d _GL_STDDEF_ALIGNAS (double);
   long double __ld _GL_STDDEF_ALIGNAS (long double);
   long int __i _GL_STDDEF_ALIGNAS (long int);
-} max_align_t;
+} max_align_t;*/
+typedef long double max_align_t;
 #endif
 
 #  endif /* _@GUARD_PREFIX@_STDDEF_H */

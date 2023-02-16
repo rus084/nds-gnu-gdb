@@ -35,9 +35,17 @@
 #include "libiberty.h"
 #include "timeline.h"
 #include "utils.h"
+#include <string.h>
 
 #undef GMON_VERSION
 #define GMON_VERSION 2
+
+#undef memcpy
+#undef mempcpy
+
+void *memcpy(void *dst, const void *src, size_t n);
+void *mempcpy(void *dst, const void *src, size_t n);
+
 
 extern time_t TotalProfileTime, ReadProfOutDataTime, ParsingProfileDataTime, WriteTemplateFileTime, ReadTemplateFileTime, ProcessDataTime, WriteTimelineBinFileTime, StartTime, EndTime;
 enum{

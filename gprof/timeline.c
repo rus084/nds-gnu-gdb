@@ -35,6 +35,13 @@
 #include "timeline.h"
 #include <sys/types.h>
 #include <unistd.h>
+#include <string.h>
+
+#undef memcpy
+#undef mempcpy
+
+void *memcpy(void *dst, const void *src, size_t n);
+void *mempcpy(void *dst, const void *src, size_t n);
 
 extern unsigned short min_function_level;
 extern time_t TotalProfileTime, ReadProfOutDataTime, ParsingProfileDataTime, WriteTemplateFileTime, ReadTemplateFileTime, ProcessDataTime, WriteTimelineBinFileTime, StartTime, EndTime;

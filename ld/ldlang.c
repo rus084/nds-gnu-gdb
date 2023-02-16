@@ -40,6 +40,7 @@
 #include "demangle.h"
 #include "hashtab.h"
 #include "elf-bfd.h"
+#include "../bfd/elfxx-riscv.h"
 #ifdef ENABLE_PLUGINS
 #include "plugin.h"
 #endif /* ENABLE_PLUGINS */

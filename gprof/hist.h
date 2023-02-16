@@ -55,4 +55,7 @@ extern int hist_check_address (unsigned address);
    an error is emitted.  */
 extern void hist_clip_symbol_address (bfd_vma *p_lowpc, bfd_vma *p_highpc);
 
+void tl_hist_print(void);
+void tl_hist_assign_samples(void);
+
 #endif /* hist_h */
